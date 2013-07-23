@@ -17,6 +17,10 @@
 		td.o {
 			background-color: blue;
 		}
+		div#turn {
+			font-size: large;
+			font-weight: bold;
+		}
 	</style>
 </head>
 <body>
@@ -37,6 +41,9 @@
 			<td></td>
 		</tr>
 	</table>
+	<div id='turn'>
+		x
+	</div>
 	<script>
 		var turn = 'x';
 		var squares = document.querySelectorAll('td');
@@ -52,6 +59,7 @@
 				} else if (turn === 'o') {
 					turn = 'x';
 				}
+				document.getElementById('turn').innerText = turn;
 			})
 			counter = counter + 1;
 		}
