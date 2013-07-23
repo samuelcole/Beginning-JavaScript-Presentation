@@ -10,12 +10,18 @@
 			border-width: 1px;
 			border-style: solid;
 			border-color: black;
+			text-align: center;
 		}
-		td.x {
-			background-color: red;
+		td .x, td .o {
+			display: none;
+			font-size: 90px;
+			line-height: 100px;
 		}
-		td.o {
-			background-color: blue;
+		td.x .x {
+			display: inline;
+		}
+		td.o .o {
+			display: inline;
 		}
 		div#turn {
 			font-size: large;
@@ -26,19 +32,19 @@
 <body>
 	<table>
 		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td><span class='x'>x</span><span class='o'>o</span></td>
+			<td><span class='x'>x</span><span class='o'>o</span></td>
+			<td><span class='x'>x</span><span class='o'>o</span></td>
 		</tr>
 		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td><span class='x'>x</span><span class='o'>o</span></td>
+			<td><span class='x'>x</span><span class='o'>o</span></td>
+			<td><span class='x'>x</span><span class='o'>o</span></td>
 		</tr>
 		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td><span class='x'>x</span><span class='o'>o</span></td>
+			<td><span class='x'>x</span><span class='o'>o</span></td>
+			<td><span class='x'>x</span><span class='o'>o</span></td>
 		</tr>
 	</table>
 	<div id='turn'>
