@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>tic tac toe</title>
+	<style>
+		td {
+			width: 100px;
+			height: 100px;
+			border-width: 1px;
+			border-style: solid;
+			border-color: black;
+		}
+		td.x {
+			background-color: red;
+		}
+		td.o {
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+	<script>
+		var turn = 'x';
+		var squares = document.querySelectorAll('td');
+		var counter = 0;
+		while(counter < squares.length) {
+			squares[counter].addEventListener('click', function () {
+				this.className = turn;
+				if (turn === 'x') {
+					turn = 'o';
+				} else if (turn === 'o') {
+					turn = 'x';
+				}
+			})
+			counter = counter + 1;
+		}
+	</script>
+</body>
+</html>
