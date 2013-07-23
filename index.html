@@ -5,11 +5,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=1024, user-scalable=no">
 
-	<title>Your deck.js Presentation</title>
-	
+	<title>JAVASCRIPT</title>
+
 	<!-- Required stylesheet -->
 	<link rel="stylesheet" href="core/deck.core.css">
-	
+
 	<!-- Extension CSS files go here. Remove or add as needed. -->
 	<link rel="stylesheet" href="extensions/goto/deck.goto.css">
 	<link rel="stylesheet" href="extensions/menu/deck.menu.css">
@@ -17,13 +17,15 @@
 	<link rel="stylesheet" href="extensions/status/deck.status.css">
 	<link rel="stylesheet" href="extensions/hash/deck.hash.css">
 	<link rel="stylesheet" href="extensions/scale/deck.scale.css">
+  <link rel="stylesheet" href="extensions/codemirror/themes/default.css">
+  <link rel="stylesheet" href="extensions/codemirror/deck.codemirror.css">
 
 	<!-- Style theme. More available in /themes/style/ or create your own. -->
-	<link rel="stylesheet" href="themes/style/web-2.0.css">
-	
+	<link rel="stylesheet" href="themes/style/swiss.css">
+
 	<!-- Transition theme. More available in /themes/transition/ or create your own. -->
 	<link rel="stylesheet" href="themes/transition/horizontal-slide.css">
-	
+
 	<!-- Required Modernizr file -->
 	<script src="modernizr.custom.js"></script>
 </head>
@@ -32,15 +34,76 @@
 <!-- Begin slides. Just make elements with a class of slide. -->
 
 <section class="slide">
-	<h1>Slide</h1>
+	<h1>JavaScript</h1>
 </section>
 
 <section class="slide">
-	<h1>Content</h1>
+	<h1>The correct number of beers</h1>
 </section>
 
 <section class="slide">
-	<h1>Here</h1>
+	<h1>2</h1>
+</section>
+
+<section class="slide">
+  <div>
+    <img src="http://www.astarmathsandphysics.com/a_level_physics_notes/cosmology/a_level_physics_notes_cosmology_the-heat_death_of_the_universe_html_m3fd87473.gif" alt='heatdeath'>
+  </div>
+</section>
+
+<section class="slide">
+  <h2>Basics</h2>
+
+  <div>
+    <textarea id="code" name="code" class="code" mode="javascript" style="display: none;" runnable="true">
+      var number_of_beers = 2;
+      console.log(number_of_beers);
+    </textarea>
+  </div>
+
+  <div>
+    <textarea id="code" name="code" class="code" mode="javascript" style="display: none;" runnable="true">
+      var name = prompt('what is your name');
+      if (name === 'sam') {
+        console.log('you must be very cool!');
+      } else {
+        console.log('ok');
+      }
+    </textarea>
+  </div>
+
+  <div>
+    <textarea id="code" name="code" class="code" mode="javascript" style="display: none;" runnable="true">
+      var cats = ['sam', 'stan', 'man'];
+      cats.forEach(function (name) {
+        console.log(name);
+      });
+    </textarea>
+  </div>
+</section>
+
+<section class="slide">
+  <h2 class='please_do_not_change'>Less Basic</h2>
+
+  <div>
+    <script type="codemirror" data-selector="#code4">
+      var document = window.top.document;
+    </script>
+    <textarea id="code4" name="code" class="code" mode="javascript" style="display: none;" runnable="true" globals="document">
+      document
+        .querySelectorAll('h2.please_do_not_change')[0]
+        .innerText = 'THERE ARE NO LAWS';
+    </textarea>
+  </div>
+  <div>
+    <textarea id="code4" name="code" class="code" mode="javascript" style="display: none;" runnable="true" globals="document">
+      var number_of_clicks = 0;
+      document.addEventListener('click', function () {
+        number_of_clicks = number_of_clicks + 1;
+        console.log(number_of_clicks);
+      });
+    </textarea>
+  </div>
 </section>
 
 <!-- End slides. -->
@@ -85,6 +148,9 @@
 <script src="extensions/status/deck.status.js"></script>
 <script src="extensions/navigation/deck.navigation.js"></script>
 <script src="extensions/scale/deck.scale.js"></script>
+<script src="extensions/codemirror/codemirror.js"></script>
+<script src="extensions/codemirror/mode/javascript/javascript.js"></script>
+<script src="extensions/codemirror/deck.codemirror.js"></script>
 
 <!-- Initialize the deck. You can put this in an external file if desired. -->
 <script>
