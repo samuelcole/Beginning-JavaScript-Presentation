@@ -23,13 +23,17 @@
 		td.o .o {
 			display: inline;
 		}
-		div#turn {
-			font-size: large;
+		p.turn {
+			font-size: 30px;
 			font-weight: bold;
 		}
 	</style>
 </head>
 <body>
+	<p class='turn'>
+		It is <span id='turn'>x</span>'s turn!
+	</p>
+	
 	<table>
 		<tr>
 			<td><span class='x'>x</span><span class='o'>o</span></td>
@@ -47,9 +51,6 @@
 			<td><span class='x'>x</span><span class='o'>o</span></td>
 		</tr>
 	</table>
-	<div id='turn'>
-		x
-	</div>
 	<script>
 		var turn = 'x';
 		var squares = document.querySelectorAll('td');
