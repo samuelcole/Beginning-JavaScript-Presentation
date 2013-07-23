@@ -43,6 +43,9 @@
 		var counter = 0;
 		while(counter < squares.length) {
 			squares[counter].addEventListener('click', function () {
+				if (this.className !== '') {
+					return;
+				}
 				this.className = turn;
 				if (turn === 'x') {
 					turn = 'o';
