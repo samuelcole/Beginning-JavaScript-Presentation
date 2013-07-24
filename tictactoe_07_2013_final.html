@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TIC TAC TOE</title>
+	<style>
+		td {
+			height: 100px;
+			width: 100px;
+			border-color: black;
+			border-width: 1px;
+			border-style: solid;
+			font-size: 90px;
+			line-height: 100px;
+			text-align: center;
+		}
+		/*
+		td.x {
+			background-color: red;
+		}
+		td.o {
+			background-color: blue;
+		}
+		*/
+	</style>
+</head>
+<body>
+	<div>
+		It is <span id='turn'>x</span>'s turn.
+	</div>
+	<table>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+	<script type="text/javascript">
+		var turn = 'x';
+		var counter = 0;
+		var squares = document.querySelectorAll('td');
+		while(counter < squares.length) {
+			squares[counter].addEventListener('click', function () {
+				if (this.className === '') {
+					this.className = turn;
+					this.innerText = turn;
+					if (turn === 'x') {
+						turn = 'o';
+					} else if (turn === 'o') {
+						turn = 'x';
+					}
+					document.querySelectorAll('span#turn')[0].innerText = turn;
+				}
+			});
+			counter = counter + 1;
+		}
+	</script>
+</body>
+</html>
